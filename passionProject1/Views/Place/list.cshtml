@@ -1,0 +1,14 @@
+﻿@model IEnumerable<passionProject1.Models.placeDto>
+@{
+    ViewBag.Title = "list";
+}
+
+<h2>list of places</h2>
+<h4><a href="/place/new">New Place</a></h4>
+@foreach (var place in Model)
+{
+    <h2><a href="/place/details/@place.PlaceID">@place.PlaceName</a></h2>
+    //<h2>@place.PlaceName</h2>
+    <div>PlaceID: @place.PlaceID</div>
+}
+

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<passionProject1.Models.BestSeasonToGoDto>
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Best Season To Go</h2>
+<a href="/BestSeasonToGo/List">Cancel</a>
+<form action="/BestSeasonToGo/Create" method="POST">
+    <div>
+        <label>Best Season To Go Name:</label> <input type="text" name="BestSeasonToGoName" />
+    </div>
+
+    <div>
+        <input type="submit" value="Create Best Season To Go" />
+    </div>
+</form>
+

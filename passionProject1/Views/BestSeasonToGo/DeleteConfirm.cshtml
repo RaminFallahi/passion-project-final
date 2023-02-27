@@ -1,0 +1,14 @@
+﻿@model passionProject1.Models.BestSeasonToGo
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this Season To Go?</h2>
+<a href="/BestSeasonToGo/List">Cancel</a>
+<h2>@Model.BestSeasonToGoID</h2>
+
+<form action="/BestSeasonToGo/Delete/@Model.BestSeasonToGoID" method="POST">
+    <input type="submit" value="Confirm Delete" />
+
+</form>

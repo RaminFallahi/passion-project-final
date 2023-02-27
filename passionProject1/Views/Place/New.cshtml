@@ -1,0 +1,47 @@
+﻿@model IEnumerable<passionProject1.Models.placeDto>
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>create a place</h2>
+<form action="/place/create" method="POST">
+    <div>
+        <label>Name:</label> <input type="text" name="PlaceName" />
+    </div>
+
+    <div>
+        <label>Category ID:</label> <input type="text" name="CategoryID" />
+    </div>
+    <div>
+        <label for="category-type">select category</label>
+        <select id="categoryID" name="categoryID">
+            <option value="parks">parks</option>
+            <option value="landmarks">landmarks</option>
+            <option value="Cultural attractions">Cultural attractions</option>
+            <option value="Food and drinks">Food and drinks</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Nightlife">Nightlife</option>
+
+        </select>
+    </div>
+
+    <div>
+        <label>Best Season To Go ID:</label> <input type="text" name="BestSeasonToGoID" />
+    </div>
+    <div>
+        <label for="bestseasontogo-type">select best season to go</label>
+        <select id="BestSeasonToGoID" name="BestSeasonToGoID">
+            <option value="spring">spring</option>
+            <option value="summer">summer</option>
+            <option value="winter">winter</option>
+            <option value="fall">fall</option>
+            <option value="all-seasons">all seasons</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="submit" value="Add Place" />
+
+    </div>
+</form>
+

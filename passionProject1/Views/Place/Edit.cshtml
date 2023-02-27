@@ -1,0 +1,37 @@
+﻿@model passionProject1.Models.ViewModels.Updateplace
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Place</h2>
+
+<form action="/place/update/@Model.Selectedplace.PlaceID" method="POST">
+    <div style="display:none;">
+        @* Pass through the place ID *@
+        <input type="number" name="PlaceID" value="@Model.Selectedplace.PlaceID" />
+    </div>
+    <div>
+        <label>Name:</label> <input type="text" name="PlaceName" value="@Model.Selectedplace.PlaceName" />
+    </div>
+    <div>
+        <label>Which Category is for?:</label>
+
+        <select name="CategoryID" id="CategoryID">
+            @foreach (var category in Model.CategoriesOptions)
+            {
+                <option value="@category.CategoryID">@category.CategoryName</option>
+            }
+        </select>
+    </div>
+    <div>
+        <label>Name:</label> <input type="number" name="BestSeasonToGoID" value="1" />
+    </div>
+
+
+
+    <div>
+        <input type="submit" value="Update Place" />
+
+    </div>
+</form>

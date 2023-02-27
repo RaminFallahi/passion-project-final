@@ -1,0 +1,25 @@
+﻿@model passionProject1.Models.CategoryDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Category</h2>
+
+<form action="/category/Update/@Model.CategoryID" method="POST">
+    <div style="display:none;">
+        @* Pass through the category ID *@
+        <input type="text" name="categoryID" value="@Model.CategoryID" />
+    </div>
+    <div>
+        <label>Category ID:</label> <input type="text" name="CategoryID" value="@Model.CategoryID" />
+    </div>
+    <div>
+        <label>Category Name:</label> <input type="text" name="categoryName" value="@Model.CategoryName" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update Category" />
+
+    </div>
+</form>

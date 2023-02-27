@@ -1,0 +1,30 @@
+﻿@model passionProject1.Models.ViewModels.DetailsPlace
+
+
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/place/List/">Go back to List</a>
+<br />
+<a href="/place/Edit/@Model.Selectedplace.PlaceID">Update</a>
+<br />
+<a style="color:#ab2020;" href="/place/DeleteConfirm/@Model.Selectedplace.PlaceID">Delete</a>
+
+<h2>@Model.Selectedplace.PlaceID @Model.Selectedplace.PlaceName</h2>
+
+
+<div>
+    <h3>Responsible for:</h3>
+    @foreach (var category in Model.ResponsibleCategories)
+    {
+        <a href="/categories/Details/@category.CategoryID">@category.CategoryName</a><br />
+    }
+</div>
+<div>
+    <h3>Responsible for:</h3>
+    @foreach (var seasonToGo in Model.ResponsibleBestSeasonToGoes)
+    {
+        <a href="/BestSeasonToGoes/Details/@seasonToGo.BestSeasonToGoID">@seasonToGo.Season</a><br />
+    }
+</div>

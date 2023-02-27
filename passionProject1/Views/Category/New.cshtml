@@ -1,0 +1,15 @@
+﻿@model IEnumerable<passionProject1.Models.CategoryDto>
+@{
+    ViewBag.Title = "list";
+}
+<h2>Create Category</h2>
+<form action="/category/Create" method="POST">
+    <div>
+        <label>Category Name:</label> <input type="text" name="categoryName" />
+    </div>
+
+    <div>
+        <input type="submit" value="Create Category" />
+
+    </div>
+</form>

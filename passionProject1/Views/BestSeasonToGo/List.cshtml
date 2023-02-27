@@ -1,0 +1,12 @@
+﻿@model IEnumerable<passionProject1.Models.BestSeasonToGoDto>
+@{
+    ViewBag.Title = "list";
+}
+
+<h2>list of Best Season To Go</h2>
+<h4><a href="/BestSeasonToGo/new">New Best Season</a></h4>
+@foreach (var BestSeasonToGo in Model)
+{
+    <h2><a href="/BestSeasonToGo/details/@BestSeasonToGo.BestSeasonToGoID">@BestSeasonToGo.Season</a></h2>
+    <div>PlaceID: @BestSeasonToGo.BestSeasonToGoID</div>
+}

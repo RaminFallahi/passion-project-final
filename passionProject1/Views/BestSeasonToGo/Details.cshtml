@@ -1,0 +1,17 @@
+﻿@model passionProject1.Models.ViewModels.DetailsBestSeasonToGo
+@{
+    ViewBag.Title = "View";
+}
+
+<h2><a href="/BestSeasonToGo/List">Go back to list</a> </h2>
+
+<br />
+<a href="/BestSeasonToGo/Edit/@Model.SelectedBestSeasonToGo.BestSeasonToGoID">Update</a>
+<br />
+<a style="color:#ab2020;" href="/BestSeasonToGo/DeleteConfirm/@Model.SelectedBestSeasonToGo.BestSeasonToGoID">Delete</a>
+
+
+<h2>BestSeasonToGo Details</h2>
+<h2>BestSeasonToGo Id:@Model.SelectedBestSeasonToGo.BestSeasonToGoID</h2>
+<h2>Season :@Model.SelectedBestSeasonToGo.Season</h2>
+
